@@ -1,0 +1,30 @@
+let as1 = document.getElementById("as1");
+let as2 = document.getElementById("as2");
+let as3 = document.getElementById("as3");
+let fondosub = document.getElementById("fondosub");
+let text = document.getElementById("text");
+let btn = document.getElementById("btn");
+let plantall = document.getElementById("plantall");
+let plant1 = document.getElementById("plant1");
+let plant2 = document.getElementById("plant2");
+let plant3 = document.getElementById("plant3");
+let plant4 = document.getElementById("plant4");
+
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
+  as1.style.transform = "scale(" + (1 - value * 0.002) + ")";
+  as2.style.transform = "scale(" + (1 - value * 0.002) + ")";
+  as3.style.transform = "scale(" + (1 - value * 0.002) + ")";
+  as1.style.rotate = value * -0.2 + "deg";
+  as2.style.rotate = value * -0.5 + "deg";
+  as3.style.rotate = value * 0 + "deg";
+  fondosub.style.Bottom = value * 0.5 + "px";
+  text.style.marginBottom = value * 1.5 + "px";
+  btn.style.marginBottom = value * 1.5 + "px";
+  plantall.style.transform = "scale(" + (1 - value * 0.001) + ")";
+  plant1.style.rotate = value * 0.02 + "deg";
+  plant2.style.rotate = value * -0.04 + "deg";
+  plant3.style.rotate = value * 0.02 + "deg";
+  plant4.style.rotate = value * -0.04 + "deg";
+  plant4.style.marginTop = value * 0.5 + "px";
+});
